@@ -17,5 +17,7 @@ class MainActivity : AppCompatActivity() {
         var bottonav : BottomNavigationView =findViewById(R.id.bottomNavigationView)
         bottonav.setupWithNavController(NavController)
 
+        var a=10
+        var b=12
     }
 }

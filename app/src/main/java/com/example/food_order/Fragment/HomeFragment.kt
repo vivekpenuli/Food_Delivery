@@ -77,10 +77,7 @@ binding = FragmentHomeBinding.inflate(inflater,container,false)
             YourDataModel(R.drawable.menu4, "Middle Text 1", "300"),
             YourDataModel(R.drawable.menu4, "pizza", "100"),
             YourDataModel(R.drawable.menu5, "popcorn", "900"),
-            YourDataModel(R.drawable.menu6, "Middle Text 2", "100"),
-            YourDataModel(R.drawable.menu7, "Middle Text 1", "200"),
-            YourDataModel(R.drawable.menu1, "Middle Text 2", "900"),
-            YourDataModel(R.drawable.menu4, "Middle Text 1", "125"),
+
 
             // Add more data items as needed
         )

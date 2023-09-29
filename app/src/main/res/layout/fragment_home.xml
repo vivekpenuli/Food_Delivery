@@ -3,7 +3,6 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-
     android:layout_height="match_parent"
     tools:context=".Fragment.HomeFragment">
 
@@ -41,10 +40,35 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/view" />
 
+    <TextView
+        android:id="@+id/textView12"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Popular"
+        android:layout_marginTop="@dimen/_13sdp"
+        android:textSize="@dimen/_12sdp"
+        android:layout_marginLeft="@dimen/_16sdp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cardView" />
+
+    <TextView
+        android:id="@+id/textView16"
+        android:layout_marginTop="@dimen/_13sdp"
+        android:layout_marginRight="@dimen/_16sdp"
+        android:layout_width="@dimen/_68sdp"
+        android:gravity="center"
+        android:elevation="@dimen/_5sdp"
+        android:layout_height="@dimen/_24sdp"
+        android:background="@drawable/whitebutton"
+        android:text="View More"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cardView" />
+
     <View
         android:id="@+id/view"
         android:layout_width="wrap_content"
-        android:layout_height="@dimen/_10sdp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/cardView" />
+        android:layout_height="@dimen/_5sdp"
+        android:layout_marginTop="@dimen/_4sdp"
+        app:layout_constraintTop_toBottomOf="@+id/textView12" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

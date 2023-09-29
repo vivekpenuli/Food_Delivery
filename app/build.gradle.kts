@@ -50,4 +50,6 @@ dependencies {
     implementation("com.intuit.sdp:sdp-android:1.1.0")
     androidTestImplementation("androidx.test.ext:junit:1.1.5")
     androidTestImplementation("androidx.test.espresso:espresso-core:3.5.1")
+    implementation("com.github.denzcoskun:ImageSlideshow:0.1.2")
+
 }

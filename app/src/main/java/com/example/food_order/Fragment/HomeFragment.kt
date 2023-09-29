@@ -1,15 +1,20 @@
 package com.example.food_order.Fragment
 
+import PopularBindingAdapter
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
+import androidx.recyclerview.widget.LinearLayoutManager
 import com.denzcoskun.imageslider.constants.ScaleTypes
 import com.denzcoskun.imageslider.interfaces.ItemClickListener
 import com.denzcoskun.imageslider.models.SlideModel
+import com.example.food_order.DataModel.YourDataModel
 import com.example.food_order.R
+
+
 import com.example.food_order.databinding.ActivityLoginBinding
 import com.example.food_order.databinding.FragmentHomeBinding
 
@@ -60,8 +65,29 @@ binding = FragmentHomeBinding.inflate(inflater,container,false)
                 Toast.makeText(requireContext(),itemMessage,Toast.LENGTH_SHORT).show()
 
             }
-        })
 
+        })
+        val recyclerView = binding.recyclerViewpopular // Replace with your actual RecyclerView ID
+
+        val dataSet = listOf(
+            YourDataModel(R.drawable.menu1, "Middle Text 1", "5"),
+            YourDataModel(R.drawable.menu2, "Burger", "6"),
+            YourDataModel(R.drawable.menu1, "Middle Text 1", "9"),
+            YourDataModel(R.drawable.menu3, "Middle Text 2", "34"),
+            YourDataModel(R.drawable.menu4, "Middle Text 1", "300"),
+            YourDataModel(R.drawable.menu4, "pizza", "100"),
+            YourDataModel(R.drawable.menu5, "popcorn", "900"),
+            YourDataModel(R.drawable.menu6, "Middle Text 2", "100"),
+            YourDataModel(R.drawable.menu7, "Middle Text 1", "200"),
+            YourDataModel(R.drawable.menu1, "Middle Text 2", "900"),
+            YourDataModel(R.drawable.menu4, "Middle Text 1", "125"),
+
+            // Add more data items as needed
+        )
+
+        recyclerView.layoutManager = LinearLayoutManager(requireContext())
+        val adapter = PopularBindingAdapter(dataSet)
+        recyclerView.adapter = adapter
 
     }
     companion object {

@@ -8,27 +8,43 @@
     tools:context=".Fragment.HomeFragment">
 
     <androidx.cardview.widget.CardView
+        android:id="@+id/cardView"
         android:layout_width="match_parent"
         android:layout_height="@dimen/_160sdp"
+        android:layout_marginLeft="@dimen/_10sdp"
+        android:layout_marginTop="@dimen/_12sdp"
+        android:layout_marginRight="@dimen/_10sdp"
+        android:elevation="@dimen/_12sdp"
+        app:cardCornerRadius="@dimen/_14sdp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        android:elevation="@dimen/_12sdp"
-android:layout_marginTop="@dimen/_12sdp"
-        android:layout_marginLeft="@dimen/_10sdp"
-android:layout_marginRight="@dimen/_10sdp"
-        android:layout_marginBottom="@dimen/_12sdp"
-        app:cardCornerRadius="@dimen/_14sdp"
-        app:layout_constraintTop_toTopOf="parent" >
+        app:layout_constraintTop_toTopOf="parent">
 
         <com.denzcoskun.imageslider.ImageSlider
             android:id="@+id/image_slider"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-
             app:iss_auto_cycle="true"
-            app:iss_period="2000"
             app:iss_delay="2000"
-            app:iss_text_align="CENTER"/>
+            app:iss_no_dots="true"
+            app:iss_period="2000"
+            app:iss_text_align="CENTER" />
 
     </androidx.cardview.widget.CardView>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerViewpopular"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/view" />
+
+    <View
+        android:id="@+id/view"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/_10sdp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cardView" />
 </androidx.constraintlayout.widget.ConstraintLayout>

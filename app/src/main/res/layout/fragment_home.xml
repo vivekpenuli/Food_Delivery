@@ -52,7 +52,7 @@
         app:layout_constraintTop_toBottomOf="@+id/cardView" />
 
     <TextView
-        android:id="@+id/textView16"
+        android:id="@+id/viewmore"
         android:layout_marginTop="@dimen/_13sdp"
         android:layout_marginRight="@dimen/_16sdp"
         android:layout_width="@dimen/_68sdp"

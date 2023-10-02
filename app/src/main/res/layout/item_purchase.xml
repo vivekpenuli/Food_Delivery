@@ -1,0 +1,50 @@
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <!-- Recently Bought Products -->
+        <TextView
+            android:id="@+id/recentlyBoughtHeader"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Recently Bought Products"
+            android:textSize="18sp"
+            android:padding="16dp" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recentlyBoughtRecyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:background="@android:color/white"
+            android:scrollbars="vertical"
+            android:nestedScrollingEnabled="false"
+        android:layout_weight="1" />
+
+        <!-- Previously Bought Products -->
+        <TextView
+            android:id="@+id/previouslyBoughtHeader"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Previously Bought Products"
+            android:textSize="18sp"
+            android:padding="16dp" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/previouslyBoughtRecyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:background="@android:color/white"
+            android:scrollbars="vertical"
+            android:nestedScrollingEnabled="false"
+        android:layout_weight="1" />
+
+    </LinearLayout>
+</ScrollView>

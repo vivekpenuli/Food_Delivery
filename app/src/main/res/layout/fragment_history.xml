@@ -1,14 +1,46 @@
-<?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".Fragment.HistoryFragment">
+    android:layout_height="match_parent">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="hello history" />
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
 
-</FrameLayout>
+        <!-- Recently Bought Products -->
+        <TextView
+            android:id="@+id/recentlyBoughtHeader"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Recently Bought Products"
+            android:textSize="18sp"
+            android:padding="16dp" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recentlyBoughtRecyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:background="@android:color/white"
+            android:scrollbars="vertical" />
+
+        <!-- Previously Bought Products -->
+        <TextView
+            android:id="@+id/previouslyBoughtHeader"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Previously Bought Products"
+            android:textSize="18sp"
+            android:padding="16dp" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/previouslyBoughtRecyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:background="@android:color/white"
+            android:scrollbars="vertical" />
+
+    </LinearLayout>
+</ScrollView>

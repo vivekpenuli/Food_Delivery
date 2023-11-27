@@ -88,7 +88,7 @@
                         android:id="@+id/itemCountTextView"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="0"
+                        android:text="1"
                         android:paddingLeft="@dimen/_6sdp"
                         android:paddingRight="@dimen/_6sdp"
                         android:paddingTop="@dimen/_1sdp"
@@ -108,6 +108,7 @@
                     android:id="@+id/deleteImageView"
                     android:layout_width="24dp"
                     android:layout_height="24dp"
+
                     android:src="@drawable/trash"
                     android:layout_marginLeft="@dimen/_26sdp"
                     android:layout_marginTop="@dimen/_5sdp"

@@ -59,7 +59,7 @@
         android:gravity="center"
         android:elevation="@dimen/_5sdp"
         android:layout_height="@dimen/_24sdp"
-        android:background="@drawable/whitebutton"
+        android:background="@drawable/text_background"
         android:text="View More"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/cardView" />

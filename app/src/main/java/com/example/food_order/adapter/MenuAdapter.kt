@@ -1,19 +1,29 @@
 package com.example.food_order.adapter
 
+import android.net.Uri
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
+import com.bumptech.glide.Glide
 import com.example.food_order.DataModel.YourDataModel
 import com.example.food_order.databinding.MenuitemBinding
-import com.example.food_order.databinding.PopularitemBinding
-
-// Replace with your actual package name
 
 class MenuAdapter(private val dataSet: List<YourDataModel>) :
     RecyclerView.Adapter<MenuAdapter.ViewHolder>() {
 
+    interface OnItemClickListener {
+        fun onItemClick(item: YourDataModel)
+    }
+
+    private var itemClickListener: OnItemClickListener? = null
+
+    fun setOnItemClickListener(listener: OnItemClickListener) {
+        itemClickListener = listener
+    }
+
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
-        return ViewHolder(MenuitemBinding.inflate(LayoutInflater.from(parent.context),parent,false))
+        val binding = MenuitemBinding.inflate(LayoutInflater.from(parent.context), parent, false)
+        return ViewHolder(binding)
     }
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
@@ -23,27 +33,22 @@ class MenuAdapter(private val dataSet: List<YourDataModel>) :
 
     override fun getItemCount() = dataSet.size
 
-    class ViewHolder(private val binding: MenuitemBinding) :
+    inner class ViewHolder(private val binding: MenuitemBinding) :
         RecyclerView.ViewHolder(binding.root) {
 
         fun bind(item: YourDataModel) {
-            binding.imageView.setImageResource(item.imageResource)
-            binding.textViewMiddle.text = item.middleText
-            binding.textViewFirst.text = item.firstText
+            binding.textViewMiddle.text = item.foodName
+            binding.textViewFirst.text = "₹"+" "+ item.foodPrice
+            val uriString: String = item.foodImg.toString()
 
+            val uri: Uri = Uri.parse(uriString)
+            Glide.with(binding.root.context)
+                .load(uri)
+                .into(binding.imageView)
+
+            binding.root.setOnClickListener {
+                itemClickListener?.onItemClick(item)
+            }
         }
     }
-
-
-
-
-
-
-
-
-
-
 }
-
-
-

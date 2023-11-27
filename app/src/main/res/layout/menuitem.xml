@@ -28,8 +28,8 @@
 
             <ImageView
                 android:id="@+id/imageView"
-                android:layout_width="56dp"
-                android:layout_height="56dp"
+                android:layout_width="@dimen/_60sdp"
+                android:layout_height="@dimen/_60sdp"
 
                 android:scaleType="centerCrop"
                 app:srcCompat="@drawable/banner2" />
@@ -40,9 +40,9 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:gravity="center"
-                android:layout_marginTop="@dimen/_12sdp"
+                android:layout_marginTop="@dimen/_20sdp"
                 android:text="Middle Text"
-                android:textSize="18sp"
+                android:textSize="@dimen/_16sdp"
                 android:textColor="@android:color/black" />
 
             <!-- Right-side LinearLayout -->
@@ -51,7 +51,8 @@
                 android:layout_height="wrap_content"
                 android:orientation="vertical"
                 android:layout_gravity="center_vertical"
-                android:layout_marginStart="8dp">
+                android:layout_marginEnd="@dimen/_6sdp"
+                >
 
                 <!-- First TextView -->
                 <TextView
@@ -59,9 +60,9 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="First Text"
-                    android:textSize="14sp"
+                    android:textAlignment="center"
+                    android:textSize="@dimen/_14sdp"
                     android:fontFamily="@font/onestvariablefont_wght"
-                    android:layout_marginLeft="@dimen/_12sdp"
                     />
                 <Space
                     android:layout_width="@dimen/_5sdp"
@@ -69,13 +70,14 @@
                 <!-- Second TextView -->
                 <TextView
                     android:id="@+id/textViewSecond"
-                    android:layout_width="@dimen/_59sdp"
+                    android:layout_width="@dimen/_68sdp"
                     android:gravity="center"
                     android:fontFamily="@font/robotoblack"
                     android:layout_height="@dimen/_22sdp"
                     android:text="Add Cart"
-                    android:background="@drawable/curved_green_background"
-                    android:textSize="14sp"
+                    android:background="@drawable/text_background"
+                    android:padding="@dimen/_1sdp"
+                    android:textSize="@dimen/_14sdp"
                     />
             </LinearLayout>
         </LinearLayout>

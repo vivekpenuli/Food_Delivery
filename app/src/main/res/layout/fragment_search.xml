@@ -8,15 +8,16 @@
     tools:context=".Fragment.SearchFragment">
 
     <androidx.appcompat.widget.SearchView
-        android:layout_width="match_parent"
-        android:layout_height="@dimen/_37sdp"
-        android:layout_marginLeft="@dimen/_5sdp"
-        android:layout_marginRight="@dimen/_5sdp"
-        android:layout_marginTop="@dimen/_3sdp"
         android:id="@+id/searchview"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_40sdp"
+        android:layout_marginLeft="@dimen/_8sdp"
+        android:layout_marginRight="@dimen/_8sdp"
+        android:layout_marginTop="@dimen/_3sdp"
         android:background="@drawable/curve_search"
         android:queryHint="Search for something..."
         app:iconifiedByDefault="false" />
+
 
 
     <androidx.recyclerview.widget.RecyclerView

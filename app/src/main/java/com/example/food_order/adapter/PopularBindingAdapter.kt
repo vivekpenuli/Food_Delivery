@@ -1,6 +1,8 @@
+import android.net.Uri
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
+import com.bumptech.glide.Glide
 import com.example.food_order.DataModel.YourDataModel
 import com.example.food_order.databinding.PopularitemBinding
 
@@ -24,9 +26,13 @@ class PopularBindingAdapter(private val dataSet: List<YourDataModel>) :
         RecyclerView.ViewHolder(binding.root) {
 
         fun bind(item: YourDataModel) {
-            binding.imageView.setImageResource(item.imageResource)
-            binding.textViewMiddle.text = item.middleText
-            binding.textViewFirst.text = item.firstText
+            binding.textViewMiddle.text = item.foodName
+            binding.textViewFirst.text = item.foodPrice
+            val uriString: String = item.foodImg.toString()
+            val uri: Uri = Uri.parse(uriString)
+            Glide.with(binding.root.context) // Use the context from the root view
+                .load(uri)
+                .into(binding.imageView) // Replace 'imageView' wit
 
         }
     }

@@ -1,5 +1,7 @@
 <ScrollView
     xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
@@ -15,7 +17,123 @@
             android:layout_height="wrap_content"
             android:text="Recently Bought Products"
             android:textSize="18sp"
-            android:padding="16dp" />
+            android:padding="@dimen/_6sdp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/white_background"
+
+            android:padding="@dimen/_5sdp"
+            android:baselineAligned="false">
+
+            <!-- Item 1 -->
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:background="@drawable/gry_back"
+                android:layout_weight="1"
+                android:layout_marginRight="@dimen/_5sdp"
+                android:orientation="vertical"
+                android:gravity="center">
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="@dimen/_25sdp"
+                    android:layout_marginTop="@dimen/_4sdp"
+                    app:cardBackgroundColor="@color/md_theme_light_error"
+                    app:cardCornerRadius="@dimen/_8sdp"
+                    android:layout_height="@dimen/_22sdp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_marginTop="@dimen/_2sdp"
+                    android:layout_height="wrap_content"
+                    android:text="SEND"/>
+            </LinearLayout>
+
+            <!-- Item 2 -->
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:background="@drawable/gry_back"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:layout_marginRight="@dimen/_5sdp"
+
+                android:gravity="center">
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="@dimen/_25sdp"
+                    android:layout_marginTop="@dimen/_4sdp"
+                    app:cardBackgroundColor="#E8EFE58A"
+                    app:cardCornerRadius="@dimen/_8sdp"
+                    android:layout_height="@dimen/_22sdp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_marginTop="@dimen/_2sdp"
+                    android:layout_height="wrap_content"
+                    android:text="CONFIRM"/>
+            </LinearLayout>
+
+            <!-- Item 3 -->
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_marginRight="@dimen/_5sdp"
+
+                android:layout_height="wrap_content"
+                android:background="@drawable/gry_back"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:gravity="center">
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="@dimen/_25sdp"
+                    android:layout_marginTop="@dimen/_4sdp"
+                    app:cardBackgroundColor="@color/md_theme_dark_onPrimaryContainer"
+                    app:cardCornerRadius="@dimen/_8sdp"
+                    android:layout_height="@dimen/_22sdp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_marginTop="@dimen/_2sdp"
+                    android:layout_height="wrap_content"
+                    android:text="READY"/>
+            </LinearLayout>
+            <!-- Repeat the structure for items 3, 4, and 5 -->
+<!-- item 4 -->
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:background="@drawable/gry_back"
+                android:layout_marginRight="@dimen/_5sdp"
+
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:gravity="center">
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="@dimen/_25sdp"
+                    android:layout_marginTop="@dimen/_4sdp"
+                    app:cardBackgroundColor="#3F51B5"
+                    app:cardCornerRadius="@dimen/_8sdp"
+                    android:layout_height="@dimen/_22sdp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_marginTop="@dimen/_2sdp"
+                    android:layout_height="wrap_content"
+                    android:text="DELIVER"/>
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+        <View
+            android:id="@+id/view3"
+            android:layout_width="match_parent"
+            android:background="#272A2B"
+            android:layout_height="@dimen/_1sdp" />
 
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/recentlyBoughtRecyclerView"
@@ -25,22 +143,8 @@
             android:background="@android:color/white"
             android:scrollbars="vertical" />
 
-        <!-- Previously Bought Products -->
-        <TextView
-            android:id="@+id/previouslyBoughtHeader"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Previously Bought Products"
-            android:textSize="18sp"
-            android:padding="16dp" />
 
-        <androidx.recyclerview.widget.RecyclerView
-            android:id="@+id/previouslyBoughtRecyclerView"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_margin="8dp"
-            android:background="@android:color/white"
-            android:scrollbars="vertical" />
+        <!-- Previously Bought Products -->
 
     </LinearLayout>
 </ScrollView>

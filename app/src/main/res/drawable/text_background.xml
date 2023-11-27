@@ -1,0 +1,5 @@
+<!-- res/drawable/curved_background.xml -->
+<shape xmlns:android="http://schemas.android.com/apk/res/android">
+    <solid android:color="@color/md_theme_dark_primary" /> <!-- Set the background color here -->
+    <corners android:radius="@dimen/_5sdp" /> <!-- Adjust the radius to control the curve -->
+</shape>

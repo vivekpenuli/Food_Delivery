@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/_440sdp"
+    tools:context=".CongratulationBottomFragment">
+
+    <!-- TODO: Update blank fragment layout -->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_40sdp"
+android:textAlignment="center"
+        android:textSize="@dimen/_22sdp"
+        android:fontFamily="@font/arimobold"
+        android:text="Congratulation \n Your Order Placed" />
+
+    <ImageView
+        android:id="@+id/imageView4"
+        android:layout_width="@dimen/_230sdp"
+        android:layout_height="@dimen/_210sdp"
+android:layout_gravity="center"
+        app:srcCompat="@drawable/congratulation" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/gohome"
+        android:background="@drawable/greenbuttongradient"
+        android:layout_width="@dimen/_123sdp"
+        android:layout_marginTop="@dimen/_375sdp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/_100sdp"
+        android:text="Go Home" />
+
+</FrameLayout>
